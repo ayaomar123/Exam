@@ -15,15 +15,17 @@
 <body>
 
 <div class="container">
-    Welcome to {{$account->currency}}
     <div class="row mt-5">
-        info:
-        <p> number : {{$account->number}}</p>
-        <p> balance : {{$account->BalanceText}}</p>
+    <h3>Welcome to {{$account->currency}}</h3>
+    </div>
+    <div class="row mt-5">
+        <h4>info:</h4>
+        <h6> Account Number : {{$account->number}}</h6>
+        <h6> Account Balance : {{$account->BalanceText}}</h6>
 
     </div>
 
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-md-6">
             <form action="{{route('debit',$account->id)}}" method="post">
                 @csrf
