@@ -27,20 +27,22 @@
 
     <div class="row mt-5">
         <div class="col-md-6">
+            <h6>Debit from your account</h6>
             <form action="{{route('debit',$account->id)}}" method="post">
                 @csrf
                 <label for="">Amount</label>
-                <input type="number" name="amount">
-                <button type="submit">Debit</button>
+                <input class="form-control" type="number" name="amount">
+                <button type="submit" class="btn btn-success mt-4">Debit</button>
             </form>
         </div>
 
         <div class="col-md-6">
+            <h6>Credit your account</h6>
             <form action="{{route('credit',$account->id)}}" method="post">
                 @csrf
                 <label for="">Amount</label>
-                <input type="number" name="amount">
-                <button type="submit">credit</button>
+                <input class="form-control" type="number" name="amount">
+                <button type="submit" class="btn btn-success mt-4">Credit</button>
             </form>
         </div>
     </div>
